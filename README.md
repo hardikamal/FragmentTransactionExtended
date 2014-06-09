@@ -40,6 +40,19 @@ Because `FragmentTransaction.setCustomAnimations` needs to use `ObjectAnimator` 
 ```
 
 
+The container of the fragments must extends from `SlidingRelativeLayout` like the example
+```xml
+<com.desarrollodroide.libraryfragmenttransactionextended.SlidingRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back1" >
+    <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</com.desarrollodroide.libraryfragmenttransactionextended.SlidingRelativeLayout>
+```
 You need to declare in your activity manifest if you need to manage change orientations:
 ```xml
 android:configChanges="keyboardHidden|orientation|screenSize"
